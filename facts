@@ -10,7 +10,6 @@ milk(partial).
 milk(skim).
 milk(soy).
 
-
 calories_in(drink, size, milk, whip, cal).
 
 calories_in(psl, short, whole, true, 230).
