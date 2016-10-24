@@ -40,9 +40,9 @@ reln(T,T,_,_,R,R,L,L).
 % adj(T0,T1,Ind,C0,C1)
 adj([Adj| T],T,C,[size(Adj)|C],L,[Adj|L]):-size(Adj). 
 adj([Adj| T],T,C,[milk(Adj)|C],L,[Adj|L]):-milk(Adj).
+adj([Adj| T],T,C,[whip(Adj)|C],L,[Adj|L]) :- whip(Adj).
 adj([Adj| T],T,C,C,L,L):-drink(Adj). 
-% adj([Adj| T],T,C,[whip(Adj)|C],L,[L|true]) :- whip(Adj). 
-% adj([Adj| T],T,C,[whip(Adj)|C],L,[L|false]) :- \+whip(Adj).
+
 
 % noun(T0,T1,Ind,C0,C1) is true if T0-T1 is a noun that provides properties C1-C0 to Ind
 noun([drink | T],T,Ind,R,[drink(Ind)|R]).
@@ -117,42 +117,42 @@ nutrition(sugar).
 nutrition(protein).
 nutrition(fat).
 
-calories_in(psl, short, whole, true, 230).
-calories_in(psl, short, partial, true, 210).
-calories_in(psl, short, skim, true, 180).
-calories_in(psl, short, soy, true, 190).
+calories_in(psl, short, whole, whip, 230).
+calories_in(psl, short, partial, whip, 210).
+calories_in(psl, short, skim, whip, 180).
+calories_in(psl, short, soy, whip, 190).
 
-calories_in(psl, short, whole, false, 170).
-calories_in(psl, short, partial, false, 160).
-calories_in(psl, short, skim, false, 130).
-calories_in(psl, short, soy, false, 140).
+calories_in(psl, short, whole, nowhip, 170).
+calories_in(psl, short, partial, nowhip, 160).
+calories_in(psl, short, skim, nowhip, 130).
+calories_in(psl, short, soy, nowhip, 140).
 
-calories_in(psl, tall, whole, true, 330).
-calories_in(psl, tall, partial, true, 300).
-calories_in(psl, tall, skim, true, 260).
-calories_in(psl, tall, soy, true, 270).
+calories_in(psl, tall, whole, whip, 330).
+calories_in(psl, tall, partial, whip, 300).
+calories_in(psl, tall, skim, whip, 260).
+calories_in(psl, tall, soy, whip, 270).
 
-calories_in(psl, tall, whole, false, 270).
-calories_in(psl, tall, partial, false, 240).
-calories_in(psl, tall, skim, false, 200).
-calories_in(psl, tall, soy, false, 210).
+calories_in(psl, tall, whole, nowhip, 270).
+calories_in(psl, tall, partial, nowhip, 240).
+calories_in(psl, tall, skim, nowhip, 200).
+calories_in(psl, tall, soy, nowhip, 210).
 
-calories_in(psl, grande, whole, true, 420).
-calories_in(psl, grande, partial, true, 380).
-calories_in(psl, grande, skim, true, 330).
-calories_in(psl, grande, soy, true, 350).
+calories_in(psl, grande, whole, whip, 420).
+calories_in(psl, grande, partial, whip, 380).
+calories_in(psl, grande, skim, whip, 330).
+calories_in(psl, grande, soy, whip, 350).
 
-calories_in(psl, grande, whole, false, 350).
-calories_in(psl, grande, partial, false, 310).
-calories_in(psl, grande, skim, false, 260).
-calories_in(psl, grande, soy, false, 280).
+calories_in(psl, grande, whole, nowhip, 350).
+calories_in(psl, grande, partial, nowhip, 310).
+calories_in(psl, grande, skim, nowhip, 260).
+calories_in(psl, grande, soy, nowhip, 280).
 
-calories_in(psl, venti, whole, true, 520).
-calories_in(psl, venti, partial, true, 470).
-calories_in(psl, venti, skim, true, 400).
-calories_in(psl, venti, soy, true, 420).
+calories_in(psl, venti, whole, whip, 520).
+calories_in(psl, venti, partial, whip, 470).
+calories_in(psl, venti, skim, whip, 400).
+calories_in(psl, venti, soy, whip, 420).
 
-calories_in(psl, venti, whole, false, 440).
-calories_in(psl, venti, partial, false, 400).
-calories_in(psl, venti, skim, false, 330).
-calories_in(psl, venti, soy, false, 350).
+calories_in(psl, venti, whole, nowhip, 440).
+calories_in(psl, venti, partial, nowhip, 400).
+calories_in(psl, venti, skim, nowhip, 330).
+calories_in(psl, venti, soy, nowhip, 350).
