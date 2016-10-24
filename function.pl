@@ -1,4 +1,3 @@
-
 % PART1: ask(Q,A) gives answer A to question related to
 % calories of Starbucks drinks. returns false if drink 
 % cannot be found.
@@ -166,13 +165,14 @@ prove_all([H|T]) :-
 % ++++++++++ DATABASE FOR STARBUCKS DRINKS +++++++++++
 
 drink(psl).
-drink(scm).
+drink(cm).
 
 whip(whip).
 whip(nowhip).
 
 coffee(psl).
 coffee(psl).
+coffee(cm).
 
 % coffee sizes
 size(short).
@@ -232,3 +232,44 @@ calories_in(psl, venti, whole, nowhip, 440).
 calories_in(psl, venti, partial, nowhip, 400).
 calories_in(psl, venti, skim, nowhip, 330).
 calories_in(psl, venti, soy, nowhip, 350).
+
+
+calories_in(cm, short, whole, whip, 200).
+calories_in(cm, short, partial, whip, 180).
+calories_in(cm, short, skim, whip, 150).
+calories_in(cm, short, soy, whip, 180).
+
+calories_in(cm, short, whole, nowhip, 140).
+calories_in(cm, short, partial, nowhip, 130).
+calories_in(cm, short, skim, nowhip, 100).
+calories_in(cm, short, soy, nowhip, 130).
+
+calories_in(cm, tall, whole, whip, 300).
+calories_in(cm, tall, partial, whip, 270).
+calories_in(cm, tall, skim, whip, 230).
+calories_in(cm, tall, soy, whip, 270).
+
+calories_in(cm, tall, whole, nowhip, 240).
+calories_in(cm, tall, partial, nowhip, 210).
+calories_in(cm, tall, skim, nowhip, 170).
+calories_in(cm, tall, soy, nowhip, 210).
+
+calories_in(cm, grande, whole, whip, 390).
+calories_in(cm, grande, partial, whip, 350).
+calories_in(cm, grande, skim, whip, 300).
+calories_in(cm, grande, soy, whip, 350).
+
+calories_in(cm, grande, whole, nowhip, 320).
+calories_in(cm, grande, partial, nowhip, 280).
+calories_in(cm, grande, skim, nowhip, 230).
+calories_in(cm, grande, soy, nowhip, 280).
+
+calories_in(cm, venti, whole, whip, 490).
+calories_in(cm, venti, partial, whip, 440).
+calories_in(cm, venti, skim, whip, 370).
+calories_in(cm, venti, soy, whip, 440).
+
+calories_in(cm, venti, whole, nowhip, 420).
+calories_in(cm, venti, partial, nowhip, 370).
+calories_in(cm, venti, skim, nowhip, 300).
+calories_in(cm, venti, soy, nowhip, 370).
