@@ -121,6 +121,7 @@ ingredient(whip).
 ingredient(sugar).
 
 coffee(psl).
+coffee(cm).
 
 size(short).
 size(tall).
@@ -137,42 +138,82 @@ nutrition(sugar).
 nutrition(protein).
 nutrition(fat).
 
-calories_in(psl, short, whole, true, 230).
-calories_in(psl, short, partial, true, 210).
-calories_in(psl, short, skim, true, 180).
-calories_in(psl, short, soy, true, 190).
+calories_in(psl, short, whole, whip, 230).
+calories_in(psl, short, partial, whip, 210).
+calories_in(psl, short, skim, whip, 180).
+calories_in(psl, short, soy, whip, 190).
 
-calories_in(psl, short, whole, false, 170).
-calories_in(psl, short, partial, false, 160).
-calories_in(psl, short, skim, false, 130).
-calories_in(psl, short, soy, false, 140).
+calories_in(psl, short, whole, nowhip, 170).
+calories_in(psl, short, partial, nowhip, 160).
+calories_in(psl, short, skim, nowhip, 130).
+calories_in(psl, short, soy, nowhip, 140).
 
-calories_in(psl, tall, whole, true, 330).
-calories_in(psl, tall, partial, true, 300).
-calories_in(psl, tall, skim, true, 260).
-calories_in(psl, tall, soy, true, 270).
+calories_in(psl, tall, whole, whip, 330).
+calories_in(psl, tall, partial, whip, 300).
+calories_in(psl, tall, skim, whip, 260).
+calories_in(psl, tall, soy, whip, 270).
 
-calories_in(psl, tall, whole, false, 270).
-calories_in(psl, tall, partial, false, 240).
-calories_in(psl, tall, skim, false, 200).
-calories_in(psl, tall, soy, false, 210).
+calories_in(psl, tall, whole, nowhip, 270).
+calories_in(psl, tall, partial, nowhip, 240).
+calories_in(psl, tall, skim, nowhip, 200).
+calories_in(psl, tall, soy, nowhip, 210).
 
-calories_in(psl, grande, whole, true, 420).
-calories_in(psl, grande, partial, true, 380).
-calories_in(psl, grande, skim, true, 330).
-calories_in(psl, grande, soy, true, 350).
+calories_in(psl, grande, whole, whip, 420).
+calories_in(psl, grande, partial, whip, 380).
+calories_in(psl, grande, skim, whip, 330).
+calories_in(psl, grande, soy, whip, 350).
 
-calories_in(psl, grande, whole, false, 350).
-calories_in(psl, grande, partial, false, 310).
-calories_in(psl, grande, skim, false, 260).
-calories_in(psl, grande, soy, false, 280).
+calories_in(psl, grande, whole, nowhip, 350).
+calories_in(psl, grande, partial, nowhip, 310).
+calories_in(psl, grande, skim, nowhip, 260).
+calories_in(psl, grande, soy, nowhip, 280).
 
-calories_in(psl, venti, whole, true, 520).
-calories_in(psl, venti, partial, true, 470).
-calories_in(psl, venti, skim, true, 400).
-calories_in(psl, venti, soy, true, 420).
+calories_in(psl, venti, whole, whip, 520).
+calories_in(psl, venti, partial, whip, 470).
+calories_in(psl, venti, skim, whip, 400).
+calories_in(psl, venti, soy, whip, 420).
 
-calories_in(psl, venti, whole, false, 440).
-calories_in(psl, venti, partial, false, 400).
-calories_in(psl, venti, skim, false, 330).
-calories_in(psl, venti, soy, false, 350).
+calories_in(psl, venti, whole, nowhip, 440).
+calories_in(psl, venti, partial, nowhip, 400).
+calories_in(psl, venti, skim, nowhip, 330).
+calories_in(psl, venti, soy, nowhip, 350).
+
+calories_in(cm, short, whole, whip, 200).
+calories_in(cm, short, partial, whip, 180).
+calories_in(cm, short, skim, whip, 150).
+calories_in(cm, short, soy, whip, 180).
+
+calories_in(cm, short, whole, nowhip, 140).
+calories_in(cm, short, partial, nowhip, 130).
+calories_in(cm, short, skim, nowhip, 100).
+calories_in(cm, short, soy, nowhip, 130).
+
+calories_in(cm, tall, whole, whip, 300).
+calories_in(cm, tall, partial, whip, 270).
+calories_in(cm, tall, skim, whip, 230).
+calories_in(cm, tall, soy, whip, 270).
+
+calories_in(cm, tall, whole, nowhip, 240).
+calories_in(cm, tall, partial, nowhip, 210).
+calories_in(cm, tall, skim, nowhip, 170).
+calories_in(cm, tall, soy, nowhip, 210).
+
+calories_in(cm, grande, whole, whip, 390).
+calories_in(cm, grande, partial, whip, 350).
+calories_in(cm, grande, skim, whip, 300).
+calories_in(cm, grande, soy, whip, 350).
+
+calories_in(cm, grande, whole, nowhip, 320).
+calories_in(cm, grande, partial, nowhip, 280).
+calories_in(cm, grande, skim, nowhip, 230).
+calories_in(cm, grande, soy, nowhip, 280).
+
+calories_in(cm, venti, whole, whip, 490).
+calories_in(cm, venti, partial, whip, 440).
+calories_in(cm, venti, skim, whip, 370).
+calories_in(cm, venti, soy, whip, 440).
+
+calories_in(cm, venti, whole, nowhip, 420).
+calories_in(cm, venti, partial, nowhip, 370).
+calories_in(cm, venti, skim, nowhip, 300).
+calories_in(cm, venti, soy, nowhip, 370).
