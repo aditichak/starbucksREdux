@@ -104,6 +104,7 @@ prove_all([H|T]) :-
 %  The Database of Facts to be Queried
 
 drink(psl).
+drink(cm).
 
 whip(whip).
 whip(nowhip).
