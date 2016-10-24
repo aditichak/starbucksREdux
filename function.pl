@@ -79,20 +79,10 @@ question([how, much | T0],T2,Ind,C0,C2,L0,L2) :-
     noun_phrase(T0,[is|T1],Ind,C0,C1,L0,L1),
     mp(T1,T2,Ind,C1,C2,L1,L2).
 
-question([is | T0],T2,Ind,C0,C2,L0,L2) :-
-    noun_phrase(T0,T1,Ind,C0,C1,L0,L1),
-    mp(T1,T2,Ind,C1,C2,L1,L2).
-
 % "how many calories are in a tall pumpkin spice latte"
-question([how, many, calories| T0],T2,Cal,C0,C2,L0,L2) :-  
-    noun_phrase(T0,T1,Ind,C0,C1,L0,L1),
-    mp(T1,T2,Ind,C1,C2,L1,L2),
-    calories(Ind,L2,Cal).
-
-question([are | T0],T2,Ind,C0,C2,L0,L2) :-
+question([how, many, calories| T0],T2,Ind,C0,C2,L0,L2) :-  
     noun_phrase(T0,T1,Ind,C0,C1,L0,L1),
     mp(T1,T2,Ind,C1,C2,L1,L2).
-
 
 question([what | T0],T2,Ind,C0,C2,L0,L2) :-
     noun_phrase(T0,T1,Ind,C0,C1,L0,L1),
@@ -101,8 +91,9 @@ question([what | T0],T2,Ind,C0,C2,L0,L2) :-
 
 % ask(Q,A) gives answer A to question Q
 ask(Q,A) :-
-    question(Q,[],A,[],C,[],L),
-    prove_all(C).
+    question(Q,[],Ind,[],C,[],L),
+    prove_all(C),
+    calories(Ind,L,A).
 
 % prove_all(L) proves all elements of L against the database
 prove_all([]).
@@ -178,42 +169,3 @@ calories_in(psl, venti, partial, nowhip, 400).
 calories_in(psl, venti, skim, nowhip, 330).
 calories_in(psl, venti, soy, nowhip, 350).
 
-calories_in(cm, short, whole, whip, 200).
-calories_in(cm, short, partial, whip, 180).
-calories_in(cm, short, skim, whip, 150).
-calories_in(cm, short, soy, whip, 180).
-
-calories_in(cm, short, whole, nowhip, 140).
-calories_in(cm, short, partial, nowhip, 130).
-calories_in(cm, short, skim, nowhip, 100).
-calories_in(cm, short, soy, nowhip, 130).
-
-calories_in(cm, tall, whole, whip, 300).
-calories_in(cm, tall, partial, whip, 270).
-calories_in(cm, tall, skim, whip, 230).
-calories_in(cm, tall, soy, whip, 270).
-
-calories_in(cm, tall, whole, nowhip, 240).
-calories_in(cm, tall, partial, nowhip, 210).
-calories_in(cm, tall, skim, nowhip, 170).
-calories_in(cm, tall, soy, nowhip, 210).
-
-calories_in(cm, grande, whole, whip, 390).
-calories_in(cm, grande, partial, whip, 350).
-calories_in(cm, grande, skim, whip, 300).
-calories_in(cm, grande, soy, whip, 350).
-
-calories_in(cm, grande, whole, nowhip, 320).
-calories_in(cm, grande, partial, nowhip, 280).
-calories_in(cm, grande, skim, nowhip, 230).
-calories_in(cm, grande, soy, nowhip, 280).
-
-calories_in(cm, venti, whole, whip, 490).
-calories_in(cm, venti, partial, whip, 440).
-calories_in(cm, venti, skim, whip, 370).
-calories_in(cm, venti, soy, whip, 440).
-
-calories_in(cm, venti, whole, nowhip, 420).
-calories_in(cm, venti, partial, nowhip, 370).
-calories_in(cm, venti, skim, nowhip, 300).
-calories_in(cm, venti, soy, nowhip, 370).
